@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>جشنواره تابستانه</title>
+    <!-- 
+        link css AND tailwind project 
+     -->
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="./vender/swiper/swiper-bundle.min.css">
+    <!-- 
+        all link finish ... sudo npx update-browserslist-db@latest
+     -->
+     <style>
+        .swiper-button-prev,
+        .swiper-button-next{
+    --swiper-navigation-size : 35px;
+        }
+     </style>
+    </head>
+    <body class="relative overflow-x-hidden h-auto overflow-y-hidden bg-slate-100 z-10">
+        <!-- 
+    ----------- svg project 
+ -->
+ <svg class="hidden opacity-0 overflow-hidden"> 
+    <symbol id="arrow_left"  fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+      </symbol>      
+      <!-- arrow left end svg -->
+      <symbol id="btnswitch" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+      </symbol>      
+      <!-- btn switch header svg end -->
+      <symbol id="start" xmlns="http://www.w3.org/2000/svg" fill="#fde047" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+      </symbol>
+      <!-- start icon svg -->
+      <symbol id="10015.io" viewBox="0 0 480 480" xmlns:xlink="http://www.w3.org/1999/xlink" >
+        <path fill=" #1e40af " d="M419.5,268Q394,296,368,310.5Q342,325,335,358.5Q328,392,296.5,387Q265,382,237.5,397Q210,412,186,394Q162,376,115,380Q68,384,48.5,350.5Q29,317,40.5,278.5Q52,240,78.5,215.5Q105,191,105,159Q105,127,129,108Q153,89,179,66Q205,43,236,63.5Q267,84,285.5,107Q304,130,347.5,122Q391,114,425,137Q459,160,452,200Q445,240,419.5,268Z" />
+    </symbol>
+    <symbol  id="10016.io" viewBox="0 0 480 480"xmlns:xlink="http://www.w3.org/1999/xlink" >
+        <path fill="#1e40af" d="M368.5,324.5Q337,409,234.5,418Q132,427,73.5,333.5Q15,240,75.5,150.5Q136,61,234.5,70Q333,79,366.5,159.5Q400,240,368.5,324.5Z" />
+    </symbol>
+    <symbol id="10017.io" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+        <path fill="#e5e5e5" d="M373.5,326Q339,412,245,403Q151,394,97.5,317Q44,240,100.5,167.5Q157,95,237.5,100Q318,105,363,172.5Q408,240,373.5,326Z" />
+    </symbol>
+    <symbol id="qoute" viewBox="0 0 65 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.9286 26.6H1V1H26.8571V27.362L17.956 45H6.26764L14.8213 28.0505L15.5534 26.6H13.9286ZM51.0714 26.6H38.1429V1H64V27.362L55.0988 45H43.4105L51.9642 28.0505L52.6962 26.6H51.0714Z" stroke="#2E4E90" stroke-width="2"/>
+        </symbol>
+        <symbol id="phone" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6 w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+          </symbol>
+          <symbol id="time" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+          </symbol>          
+ </svg>
+<!-- 
+    finish svg project 
+ -->
+ <!-- loader site -->
+
+ <!-- -------------- -->
+ <svg class="absolute top-[10%] -left-40 w-[20rem] h-[20rem] -z-10 blur-lg">
+    <use href="#10015.io"></use>
+</svg>
+    <main class="font-dana   max-w-[90rem]  md:mx-auto z-10 relative">
+        <svg class="absolute top-[50%] -left-30 w-[20rem] h-[20rem] -z-10 blur-lg">
+            <use href="#10017.io"></use>
+        </svg>
+        <svg class="absolute top-[80%] right-0 w-[20rem] h-[20rem] -z-10 blur-lg">
+            <use href="#10017.io"></use>
+        </svg>
+     <!-- section title header -->
+     <section id="sectionHeaderTitle" class=" shadow-md  w-full h-auto  p-2 py-4 md:px-4" style="border-radius: 0 0 2rem 2rem; background: rgb(8,28,91);
+     background: linear-gradient(101deg, rgba(8,28,91,1) 13%, hsl(226, 71%, 40%) 51%);">
+          <div class="flex justify-between items-center mx-w-[50rem] mx-auto  flex-col gap-y-2 text-white font-medium
+          mobile:flex-row md:px-10 lg:px-12">
+             <!-- right -->
+             <div class="h-full w-auto sm:flex sm:items-center  sm:justify-center sm:flex-row-reverse sm:gap-x-2">
+                 <div class="text-dana font-dana text-white bg-blue-950 flex flex-col justify-center items-center py-1 px-12 gap-y-1 rounded-full">
+                     <span class="inline text-sm">پشتیبانی 24 ساعته</span>
+                     <span class="inline text-sm">09391521440</span>
+                 </div>
+                 <div class="bg-blue-800  p-2 rounded-full text-center
+                 flex items-center justify-center  mt-2">
+                     <span id="saport" class="cursor-pointer inline-flex">
+                         <svg class="w-6 h-6 font-semibold mr-2">
+                             <use href="#arrow_left"></use>
+                         </svg>
+                         درخواست مشاوره</span>
+                 </div>
+             </div>
+             <!-- right  end-->
+                    <!-- left -->
+             <div class="text-xl text-center sm:text-right md:text-2xl font-aviny">
+                <p class="">بیایید یک برنامه زمانی تعیین کنیم</p>
+                <p class="mt-1">مشاوره رایگان </p>
+             </div>
+     <!-- left end -->
+          </div>
+       <!-- <div id="btnSwitchicon" class="absolute -bottom-12 right-3 cursor-pointer bg-blue-700 rounded-full  w-10 flex justify-center items-center h-10 ">
+           <svg class=" text-white w-7 h-7">
+             <use href="#btnswitch"></use>
+           </svg>
+       </div> -->
+     </section>
+     <!-- section header titlle finish -->
+         <div class="mt-5"> 
+            <!-- main header -->
+            <div class="w-full md:flex md:justify-center md:items-center md:flex-row-reverse md:gap-x-20">
+                <!-- logo right -->
+                      <div class=" max-w-[35rem] mx-auto md:m-0">
+                        <img class="w-full h-full object-cover" src="./images/png-bahar2.png" alt="logo">
+                      </div>
+                <!-- logo left -->
+                <div class="max-w-[35rem] mx-auto md:m-0">
+                    <!-- .......... -->
+                       <div class="text-right">
+                        <span class="bg-white shadow-lg rounded-full tracking-tighter px-2 py-1 text-sm  inline text-blue-800">توضیحات ما</span>
+                        <div class="mt-3 text-right">
+                            <h1 class=" font-aviny text-[2rem] text-center md:text-[2.5rem] md:text-right">آنچه مشتریان ما در مورد ما میگویند</h1>
+                            <div class="flex justify-center md:justify-end pb-2">
+                                <svg class="w-5 h-5 text-yellow-300"><use href="#start"></use></svg>
+                                <svg class="w-5 h-5 text-yellow-300"><use href="#start"></use></svg>
+                                <svg class="w-5 h-5 text-yellow-300"><use href="#start"></use></svg>
+                                <svg class="w-5 h-5 text-yellow-300"><use href="#start"></use></svg>
+                                <svg class="w-5 h-5 text-yellow-300"><use href="#start"></use></svg>
+                            </div>
+                            <p class="tracking-tighter text-center md:text-right md:text-lg">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز </p>
+                            <div class="flex flex-row-reverse justify-center md:justify-start mt-4">
+                                <div class="w-14 h-14 rounded-full"><img class="rounded-full w-14 h-14 object-cover" src="./images/header-avatar_auto_x1.jpg" alt="face"></div>
+                                <div class="flex flex-col border-r-[3px] border-blue-800 mr-2 pr-2">
+                                    <span class="font-bold tracking-tighter font-aviny text-xl">فارس کد</span>
+                                    <span class="font-medium tracking-tighter">طراح سایت</span>
+                                </div>
+                            </div>
+                        </div>
+                       </div>
+                    <!-- .......... -->
+                </div>
+            </div>
+            <!-- end main header -->
+         </div>
+         <!-- section main heder finish  -->
+         <section class="p-1 bg-slate-50 mt-10 rounded-lg  shadow-md max-w-[70rem] mx-auto">
+              <div>
+                <!-- box values p  1 -->
+                <div class="text-center md:text-right px-3 py-3 relative z-10">
+                    <img src="./images/assets-01_cropped_via_10015_io.png" class="absolute right-0 top-0 max-w-5 -z-10" alt="">
+                    <h2 class="font-aviny font-medium text-2xl mt-3">آموزش حساب داری شرکتی</h2>
+                  <p class="tracking-tighter md:text-right font-[500px]">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده  </p>
+                 <h2 class="font-aviny font-medium  text-2xl mt-3">مزیای استفاده از شرکت ما </h2>
+                 <p class="tracking-tighter md:text-right font-[500px]">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده </p>
+                </div class="">
+                <!-- box values p 1 end -->
+              </div>
+         </section>
+         <!-- section main about finish -->
+         <!-- section skills start -->
+         <div class="py-4 max-w-[70rem] shadow-lg rounded-xl mx-auto bg-slate-50 mt-5"></div>
+         <section class="max-w-[70rem] mx-auto mt-3 p-5 bg-slate-100 rounded-md">
+         <div class="md:flex justify-center gap-x-5 items-center flex-row-reverse">
+            <div class="relative">
+                  <img src="./images/header-avatar_auto_x1.jpg" class="min-h-[30rem] rounded-md  object-cover" alt="">      
+                  <div class="md:absolute mt-2 md:m-0  left-0 font-aviny text-2xl bottom-0 md:w-24 md:h-24 flex justify-center items-center text-center
+                  bg-blue-800 rounded-md text-white border-[3px] border-blue-600" style="border-radius: 2rem .3rem .5rem .3rem;">بیش از 17 سال سابقه</div>          
+            </div>
+            <div class="mt-3">
+                <div class="text-center md:text-right">
+                    <span class="bg-blue-200 text-blue-600 p-1 rounded-full">وظیفه ما چیست</span>
+                    <h2 class="font-aviny text-[2.5rem] mt-3">ما میدانیم که چگونه تجارت جهانی را مدیریت کنیم</h2>
+                    <p class="tracking-tighter mt-3 text-blue-900">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد </p>
+                    <div class="hidden md:flex items-center flex-row-reverse mt-3 gap-x-5">
+                        <div>
+                               <div class="flex flex-row-reverse items-center  gap-x-2">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 w-10 h-10 text-blue-900">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                                      </svg>                                 
+                                </div>
+                                <div class="flex flex-col text-blue-900">
+                                    <span class="text-[2rem] font-semibold">۳۶%</span>
+                                    <span class="font-medium text-xl tracking-tighter">مشتریان بیمه شده </span>
+                                </div>
+                               </div>
+                               <div class="flex flex-row-reverse items-center gap-x-2">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 w-10 h-10 text-blue-900">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0" />
+                                      </svg>                                          
+                                </div>
+                                <div class="flex flex-col text-blue-900">
+                                    <span class="text-[2rem] font-semibold">۶۸%</span>
+                                    <span class="font-medium text-xl tracking-tighter">جوایز ما</span>
+                                </div>
+                               </div>
+                        </div>
+                        <div>
+                            <ul class="">
+                                <li class="flex flex-row-reverse mt-3 items-center  gap-x-2">
+                                    <span class="flex justify-center items-center  w-6 h-6 rounded-full bg-blue-800"><svg class="w-5 text-white h-5 font-semibold  "><use href="#arrow_left"></use></svg></span>
+                                    100% بازخورد بهتر
+                                </li>
+                                <li class="flex flex-row-reverse mt-3 items-center gap-x-2">
+                                    <span class="flex justify-center items-center  w-6 h-6 rounded-full bg-blue-800"><svg class="w-5 text-white h-5 font-semibold  "><use href="#arrow_left"></use></svg></span>
+                                    افزایش فروش با بازاریابی
+                                </li>
+                                <li class="flex flex-row-reverse mt-3 items-center gap-x-2">
+                                    <span class="flex justify-center items-center  w-6 h-6 rounded-full bg-blue-800"><svg class="w-5 text-white h-5 font-semibold  "><use href="#arrow_left"></use></svg></span>
+                                گارانتی خدمات ما
+                                    <li class="flex flex-row-reverse mt-3 items-center gap-x-2">
+                                        <span class="flex justify-center items-center  w-6 h-6 rounded-full bg-blue-800"><svg class="w-5 text-white h-5 font-semibold  "><use href="#arrow_left"></use></svg></span>
+                                        بازخورد مثبت در چند سال گذشته
+                                    </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex justify-center md:justify-end items-center mt-5">
+                        <a class="py-2 px-3 rounded-full flex items-center justify-center flex-row-reverse bg-blue-800 w-[8rem] text-white tracking-tighter gap-x-2" href="#">تماس با ما <svg class="w-5 h-5"><use href="#arrow_left"></use></svg></a>                        
+                    </div>  
+                </div>
+            </div>
+         </div>
+         </section>
+         <!-- section skills finish -->
+         <!-- section comments users -->
+         <section class="max-w-[70rem] mx-auto">
+            <h2 class="mx-auto font-aviny text-[2.5rem] text-center">برخی از نظرات کاربران ما</h2>
+            <div class="">
+                <!-- swiper slider -->
+        <!-- Slider main container -->
+        <div class="swiper w-full h-[350px]">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper p-1">
+              <!-- Slides -->
+              <div data-swiper-autoplay="2000" class="swiper-slide  flex justify-center items-center">
+                <!-- result slide  -->
+                   <div class="h-full flex justify-center items-center">
+                    <div class="w-[25rem] h-[15rem] shadow-lg rounded-xl p-3 bg-slate-100 ">
+                        <!-- title box -->
+                         <div class="flex justify-between items-center flex-row-reverse">
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5"><use href="#start"></use></svg>
+                                <svg class="w-5 h-5"><use href="#start"></use></svg>
+                                <svg class="w-5 h-5"><use href="#start"></use></svg>
+                                <svg class="w-5 h-5"><use href="#start"></use></svg>
+                            </div>
+                            <div>
+                                <svg class="w-7 h-7">
+                                    <use href="#qoute"></use>
+                                 </svg>
+                            </div>
+                         </div>
+                         <!-- main box -->
+                         <div class="mt-2"><p class="text-right">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p></div>
+                         <!-- footer box -->
+                         <div class="flex items-center justify-start flex-row-reverse gap-x-2 mt-3">
+                            <div class="w-[4rem] h-[4rem] rounded-full"><img class="w-full h-full rounded-full" src="./images/header-avatar_auto_x1.jpg" alt=""></div>
+                            <div class="flex flex-col justify-center items-center border-r-[3px] rounded-sm border-blue-900  pr-2">
+                                <span class="font-aviny text-xl">اقای محمد حیدری</span>
+                                <span class="text-sm tracking-tight">مدیر عامل آژانس</span>
+                            </div>
+                         </div>
+                    </div>
+                   </div>
+                <!-- result slide finish -->
+              </div> 
+              <div data-swiper-autoplay="2000" class="swiper-slide  flex justify-center items-center">
+                <!-- result slide  -->
+                   <div class="h-full flex justify-center items-center">
+                    <div class="w-[25rem] h-[15rem] shadow-lg rounded-xl p-3 bg-slate-100 ">
+                        <!-- title box -->
+                         <div class="flex justify-between items-center flex-row-reverse">
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5"><use href="#start"></use></svg>
+                                <svg class="w-5 h-5"><use href="#start"></use></svg>
+                                <svg class="w-5 h-5"><use href="#start"></use></svg>
+                                <svg class="w-5 h-5"><use href="#start"></use></svg>
+                            </div>
+                            <div>
+                                <svg class="w-7 h-7">
+                                    <use href="#qoute"></use>
+                                 </svg>
+                            </div>
+                         </div>
+                         <!-- main box -->
+                         <div class="mt-2"><p class="text-right">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p></div>
+                         <!-- footer box -->
+                         <div class="flex items-center justify-start flex-row-reverse gap-x-2 mt-3">
+                            <div class="w-[4rem] h-[4rem] rounded-full"><img class="w-full h-full rounded-full" src="./images/header-avatar_auto_x1.jpg" alt=""></div>
+                            <div class="flex flex-col justify-center items-center border-r-[3px] rounded-sm border-blue-900  pr-2">
+                                <span class="font-aviny text-xl">اقای محمد حیدری</span>
+                                <span class="text-sm tracking-tight">مدیر عامل آژانس</span>
+                            </div>
+                         </div>
+                    </div>
+                   </div>
+                <!-- result slide finish -->
+              </div> 
+              <div data-swiper-autoplay="2000" class="swiper-slide  flex justify-center items-center">
+                <!-- result slide  -->
+                   <div class="h-full flex justify-center items-center">
+                    <div class="w-[25rem] h-[15rem] shadow-lg rounded-xl p-3 bg-slate-100 ">
+                        <!-- title box -->
+                         <div class="flex justify-between items-center flex-row-reverse">
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5"><use href="#start"></use></svg>
+                                <svg class="w-5 h-5"><use href="#start"></use></svg>
+                                <svg class="w-5 h-5"><use href="#start"></use></svg>
+                                <svg class="w-5 h-5"><use href="#start"></use></svg>
+                            </div>
+                            <div>
+                                <svg class="w-7 h-7">
+                                    <use href="#qoute"></use>
+                                 </svg>
+                            </div>
+                         </div>
+                         <!-- main box -->
+                         <div class="mt-2"><p class="text-right">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p></div>
+                         <!-- footer box -->
+                         <div class="flex items-center justify-start flex-row-reverse gap-x-2 mt-3">
+                            <div class="w-[4rem] h-[4rem] rounded-full"><img class="w-full h-full rounded-full" src="./images/header-avatar_auto_x1.jpg" alt=""></div>
+                            <div class="flex flex-col justify-center items-center border-r-[3px] rounded-sm border-blue-900  pr-2">
+                                <span class="font-aviny text-xl">اقای محمد حیدری</span>
+                                <span class="text-sm tracking-tight">مدیر عامل آژانس</span>
+                            </div>
+                         </div>
+                    </div>
+                   </div>
+                <!-- result slide finish -->
+              </div> 
+              <div data-swiper-autoplay="2000" class="swiper-slide  flex justify-center items-center">
+                <!-- result slide  -->
+                   <div class="h-full flex justify-center items-center">
+                    <div class="w-[25rem] h-[15rem] shadow-lg rounded-xl p-3 bg-slate-100 ">
+                        <!-- title box -->
+                         <div class="flex justify-between items-center flex-row-reverse">
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5"><use href="#start"></use></svg>
+                                <svg class="w-5 h-5"><use href="#start"></use></svg>
+                                <svg class="w-5 h-5"><use href="#start"></use></svg>
+                                <svg class="w-5 h-5"><use href="#start"></use></svg>
+                            </div>
+                            <div>
+                                <svg class="w-7 h-7">
+                                    <use href="#qoute"></use>
+                                 </svg>
+                            </div>
+                         </div>
+                         <!-- main box -->
+                         <div class="mt-2"><p class="text-right">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</p></div>
+                         <!-- footer box -->
+                         <div class="flex items-center justify-start flex-row-reverse gap-x-2 mt-3">
+                            <div class="w-[4rem] h-[4rem] rounded-full"><img class="w-full h-full rounded-full" src="./images/header-avatar_auto_x1.jpg" alt=""></div>
+                            <div class="flex flex-col justify-center items-center border-r-[3px] rounded-sm border-blue-900  pr-2">
+                                <span class="font-aviny text-xl">اقای محمد حیدری</span>
+                                <span class="text-sm tracking-tight">مدیر عامل آژانس</span>
+                            </div>
+                         </div>
+                    </div>
+                   </div>
+                <!-- result slide finish -->
+              </div> 
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev !w-1 !h-1 !text-blue-900"></div>
+            <div class="swiper-button-next !w-1 !h-1 !text-blue-900"></div>
+          </div>
+                <!-- swiper slider finish -->
+            </div>
+         </section>
+         <!-- section form  -->
+            <section id="formSuport" class="max-w-[70rem] mx-auto my-5 bg-blue-600 py-5 rounded-lg">
+                <div class="my-1 text-center md:flex justify-center items-center gap-x-10">
+                   <form action="" method="post" class="sm:flex justify-center md:justify-normal mb-5 md:m-0 gap-x-3">
+                    <input type="submit" value="ارسال" class="bg-blue-800 text-white px-5 cursor-pointer py-2 rounded-md">
+                    <input type="text" placeholder="نام خود را وارد کنید" id="name" class="max-w-[20rem] my-2 sm:m-0 px-2 py-2 outline-none rounded-md text-right">
+                    <input type="text" placeholder="شماره خود را وادر کنید" id="phone" class="max-w-[20rem] px-2 py-2 outline-none rounded-md text-right">
+                   </form>
+                   <div><h2 class="font-aviny text-3xl text-white">پشتیبان های ما آماده ارتباط با  شما هستن </h2></div>
+                </div>
+            </section>
+         <!-- section form finish -->
+         <!-- section comments users finish -->
+         <footer class="relative max-w-[70rem] pb-5 mx-auto z-10">
+             <div class="lg:flex  justify-between items-center p-1 flex-row-reverse gap-x-5 w-full h-full">
+                <div class="text-right w-full lg:max-w-[22rem] h-full">
+                    <h3 class="font-aviny text-[2rem] py-2 text-blue-900">جیرو</h3>
+                    <p class="text-wrap tracking-tight">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز</p>
+                    <span class="flex my-2  justify-end items-end gap-x-2 text-blue-900 font-semibold">9991521449 
+                    <svg class="w-5 h-5"><use href="#phone"></use></svg>       
+                    </span>
+                    <span class="text-blue-900 font-semibold flex items-end justify-end gap-x-2">
+                        شنبه - پنج شنبه : 8 صبح - 5 عصر
+                        <svg class="w-5 h-5"><use href="#time"></use></svg>
+                    </span>
+                </div>
+                <div class="text-right h-full">
+                    <h3 class="font-aviny text-[2rem] text-blue-900 border-b-2 border-blue-900 rounded-sm">منو</h3>
+                    <ul class="mt-1 cursor-pointer">
+                        <li>شرکت</li>
+                        <li>مشاغل</li>
+                        <li>رساننه های مطبوعاتی</li>
+                        <li>وبلاگ</li>
+                        <li>حریم خصوصی</li>
+                    </ul>
+                </div>
+                <div class="text-right h-full ">
+                    <h3 class="font-aviny text-[2rem] text-blue-900 border-b-2 border-blue-900 rounded-sm">دسترسی سریع</h3>
+                    <ul class="mt-1 cursor-pointer">
+                        <li>چگونه کار می کند</li>
+                        <li>شرکا</li>
+                        <li>گواهینامه ها</li>
+                        <li>مطالعات موردی</li>
+                        <li>قیمت گذاری</li>
+                    </ul>
+                </div>
+                <div class="text-right w-full lg:max-w-[20rem] h-full">
+                    <h3 class="font-aviny text-[2rem] text-blue-900 ">خدمات ما</h3>
+                    <p class="text-center lg:text-right">با عضویت در خبر نامه از جدیدترین مقاله و تخفیفات ما مطلع شوید</p>
+                    <div class="flex justify-end items-center gap-x-3 mt-2 cursor-pointer">
+                        <div class="w-8 h-8 rounded-full bg-slate-200 flex justify-center items-center">
+                            <svg class="w-5 h-5 bg-slate-200 text-blue-900 rounded-full " viewBox='0 0 24 24' fill='currentColor'><path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"></path></svg>
+                        </div>
+                        <div class="w-8 h-8 rounded-full bg-slate-200 flex justify-center items-center">
+                            <svg class="w-5 h-5 bg-slate-200 text-blue-900 rounded-full " viewBox='0 0 24 24' fill='currentColor'><path d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"></path></svg>
+                        </div>
+                        <div class="w-8 h-8 rounded-full bg-slate-200 flex justify-center items-center">
+                            <svg class="w-5 h-5 bg-slate-200 text-blue-900 rounded-full " viewBox='0 0 24 24' fill='currentColor'><path d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+             </div>
+         </footer>
+    </main>
+<div class="absolute top-[30%] -z-10 right-0 w-[30rem] h-[30rem]">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 183.94 366.77">
+        <defs>
+          <style>
+            .cls-1 {
+              fill: none;
+              stroke: #ffffffc3;
+              stroke-miterlimit: 10;
+              stroke-width: 4px;
+            }
+      
+            .cls-2 {
+              fill: #ffffff86;
+              stroke-width: 0px;
+            }
+          </style>
+        </defs>
+        <path class="cls-2" d="M170.36,362.33l-22.39-22.39c-5.93-5.93-5.93-15.53,0-21.45l22.39-22.39c3.17-3.17,7.42-4.65,11.58-4.41v75.05c-4.16.24-8.4-1.23-11.58-4.41Z"/>
+        <path class="cls-2" d="M170.39,265.01l-22.39-22.39c-5.93-5.93-5.93-15.53,0-21.45l22.39-22.39c3.17-3.17,7.4-4.64,11.55-4.42v75.08c-4.16.21-8.38-1.25-11.55-4.43Z"/>
+        <rect class="cls-2" x="101.44" y="249.57" width="62" height="62" rx="15.17" ry="15.17" transform="translate(424.48 385.31) rotate(135)"/>
+        <path class="cls-2" d="M170.1,167.99l-22.39-22.39c-5.93-5.93-5.93-15.53,0-21.45l22.39-22.39c3.24-3.24,7.59-4.7,11.83-4.39v75.02c-4.24.31-8.59-1.15-11.84-4.4Z"/>
+        <rect class="cls-2" x="103.88" y="149.83" width="62" height="62" rx="15.17" ry="15.17" transform="translate(358.12 213.31) rotate(135)"/>
+        <rect class="cls-2" x="55.21" y="198.5" width="62" height="62" rx="15.17" ry="15.17" transform="translate(309.45 330.83) rotate(135)"/>
+        <path class="cls-2" d="M170.13,70.67l-22.39-22.39c-5.93-5.93-5.93-15.53,0-21.45l22.39-22.39c3.24-3.24,7.58-4.71,11.81-4.4v75.02c-4.23.31-8.57-1.16-11.81-4.4Z"/>
+        <rect class="cls-2" x="101.18" y="55.23" width="62" height="62" rx="15.17" ry="15.17" transform="translate(286.62 53.73) rotate(135)"/>
+        <rect class="cls-2" x="55.23" y="101.18" width="62" height="62" rx="15.17" ry="15.17" transform="translate(240.67 164.66) rotate(135)"/>
+        <rect class="cls-2" x="6.56" y="149.85" width="62" height="62" rx="15.17" ry="15.17" transform="translate(192 282.18) rotate(135)"/>
+        <polyline class="cls-1" points="181.94 .04 181.94 34.29 181.94 102.3 181.94 122.52 181.94 190.54 181.94 210.45 181.94 278.52 181.94 298.7 181.94 366.75"/>
+      </svg>
+</div>
+ <script src="./javascript/index.js"></script>
+ <script src="./vender/swiper/swiper-bundle.min.js"></script>
+</body> 
+</html> 

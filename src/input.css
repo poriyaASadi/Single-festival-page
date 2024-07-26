@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+      font-family: 'dana';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(../fonts/DanaFaNum-Regular.woff) format('woff');
+    }
+    
+    @font-face {
+      font-family:'aviny';
+      src: url(../fonts/aviny\ web.woff2);
+    }
+  }
